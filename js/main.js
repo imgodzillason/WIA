@@ -50,7 +50,7 @@ window.onload = function(){
     var theCanvas1 = document.getElementById("Canvas1");
     var ctx1 = theCanvas1.getContext("2d");
 
-    ctx1.fillStyle = "blue";
+    ctx1.fillStyle = "rgb(64,224,208)";
     ctx1.strokeStyle = "black";
     ctx1.lineWidth = 5;
 
@@ -76,7 +76,7 @@ Use the arc method
     var theCanvas2 = document.getElementById("Canvas2");
     var ctx2 = theCanvas2.getContext("2d");
 
-    ctx2.fillStyle = "red";
+    ctx2.fillStyle = "rgba(178,34,34,.5)";
     ctx2.strokeStyle = "black";
     ctx2.lineWidth = 5;
 
@@ -86,6 +86,10 @@ Use the arc method
     ctx2.beginPath();
     ctx2.arc(50,50,20,0,radian);
     ctx2.fill();
+
+    //30px radius stroke
+    ctx2.beginPath();
+    ctx2.arc(50,50,30,0,radian);
     ctx2.stroke();
 
 
@@ -106,10 +110,12 @@ Height and width and color are up to you.
     var theCanvas3 = document.getElementById("Canvas3");
     var ctx3 = theCanvas3.getContext('2d');
 
-    var length = 20;
+    var length = 50;
 
     ctx3.beginPath();
     ctx3.translate(100, 100);
+    ctx3.strokeStyle = "black";
+    ctx3.fillStyle = "yellow";
 
     //offset rotation to straighten star
     ctx3.rotate((Math.PI / 10));
@@ -126,6 +132,7 @@ Height and width and color are up to you.
     }
     ctx3.lineTo(0, length);
     ctx3.closePath();
+    ctx3.fill();
     ctx3.stroke();
 
 /*******************************************
@@ -146,13 +153,14 @@ Do not overlap any other object.
     var ctx4 = theCanvas4.getContext('2d');
 
     ctx4.beginPath();
+
     //Top of arc/umbrella
+
     ctx4.arc(150, 150, 100, Math.PI, 0);
     ctx4.counterclockwise=false;
     ctx4.fillStyle = "red";
     ctx4.strokeStyle = "black";
     ctx4.lineWidth = 10;
-    //ctx4.fill();
     ctx4.stroke();
 
 
@@ -170,7 +178,7 @@ Do not overlap any other object.
 PART 5
 
 Practice using text.
-Draw text into your canvas.  It can said whatever you would like in any color.
+Draw text into your canvas.  It can say whatever you would like in any color.
 
 ********************************************/
 
